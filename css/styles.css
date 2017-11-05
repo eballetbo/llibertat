@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(../fonts/RobotoCondensed-Regular.ttf);
+}
+
+.contador {
+  border-radius: 20px;
+  background-color: goldenrod;
+}
+
+.text {
+  color: black;
+  font-size: 40px;
+  font-family: 'Roboto Condensed', serif;
+  font-weight: 40;
+  margin-top:10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#intro {
+  margin-top: 30px;
+}
+
+.intro {
+  font-size: 60px;
+}
+
+.franja {
+  background-color: firebrick;
+  color: white;
+}
+
+.digit {
+  color: firebrick;
+  font-size: 120px;
+  /*font-weight: 400;*/
+  font-family: 'Roboto', serif;
+  margin: 10px;
+  text-align: center;
+}
+
+#jordis {
+  margin-top: 50px;
+}
+
+#govern {
+  margin-top: 50px; 
+}
+
+.link {
+  color: firebrick;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: goldenrod;
+}
+
+#hashtags {
+  margin-top: 50px;
+}
+
