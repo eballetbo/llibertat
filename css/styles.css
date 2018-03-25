@@ -8,6 +8,10 @@
     src: url(../fonts/RobotoCondensed-Regular.ttf);
 }
 
+img {
+  max-width:100%;
+}
+
 .contador {
   border-radius: 20px;
   background-color: goldenrod;
@@ -45,14 +49,6 @@
   text-align: center;
 }
 
-#jordis {
-  margin-top: 50px;
-}
-
-#govern {
-  margin-top: 50px; 
-}
-
 .link {
   color: firebrick;
   padding: 20px;
@@ -62,7 +58,36 @@
   background-color: goldenrod;
 }
 
-#hashtags {
-  margin-top: 50px;
+.names {
+  color: white;
+  font-size: 24px;
+  font-family: 'Roboto', serif;
+  font-weight: bold;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  height: 200px;
+  background-color: grey;
 }
 
+.subtitle {
+  color: white;
+  font-size: 60px;
+  font-family: 'Roboto', serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+#hashtags {
+  margin-top: 10px;
+}
+
+#slideEmpresonats {
+  margin-top: 100px;
+}

@@ -3,8 +3,10 @@
 * Author: @mrwigster / trulycode.com
 */
 window.onload=function() {
-  upTimeJordis('oct,16,2017,23:00:00');
-  upTimeGovern('nov,2,2017,19:00:00');
+  upTimeJordis('oct,16,2017,05:00:00');
+  upTimeFornJunqueras('nov,2,2017,05:00:00');
+  upTimeBassaTurullRomevaRull('mar,23,2018,05:00:00');
+  upTimeForcadell('mar,23,2018,05:00:00');
 }
 
 function upTimeJordis(countTo) {
@@ -13,60 +15,50 @@ function upTimeJordis(countTo) {
   difference = (now-countTo);
 
   days=Math.floor(difference/(60*60*1000*24)*1);
-  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
-  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
-  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
-
-  if (hours < 10) {
-    hours = '0' + hours;
-  }
-
-  if (mins < 10) {
-    mins = '0' + mins;
-  }
-
-  if (secs < 10) {
-    secs = '0' + secs;
-  }
 
   document.getElementById('diesJordis').firstChild.nodeValue = days;
-  document.getElementById('horesJordis').firstChild.nodeValue = hours;
-  document.getElementById('minutsJordis').firstChild.nodeValue = mins;
-  document.getElementById('segonsJordis').firstChild.nodeValue = secs;
 
   clearTimeout(upTimeJordis.to);
   upTimeJordis.to=setTimeout(function(){ upTimeJordis(countTo); },1000);
 }
 
-function upTimeGovern(countTo) {
+function upTimeFornJunqueras(countTo) {
   now = new Date();
   countTo = new Date(countTo);
   difference = (now-countTo);
 
   days=Math.floor(difference/(60*60*1000*24)*1);
-  hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
-  mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
-  secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
 
-  if (hours < 10) {
-    hours = '0' + hours;
-  }
+  document.getElementById('diesFornJunqueras').firstChild.nodeValue = days;
 
-  if (mins < 10) {
-    mins = '0' + mins;
-  }
+  clearTimeout(upTimeFornJunqueras.to);
+  upTimeFornJunqueras.to=setTimeout(function(){ upTimeFornJunqueras(countTo); },1000);
+}
 
-  if (secs < 10) {
-    secs = '0' + secs;
-  }
+function upTimeBassaTurullRomevaRull(countTo) {
+  now = new Date();
+  countTo = new Date(countTo);
+  difference = (now-countTo);
 
-  document.getElementById('diesGovern').firstChild.nodeValue = days;
-  document.getElementById('horesGovern').firstChild.nodeValue = hours;
-  document.getElementById('minutsGovern').firstChild.nodeValue = mins;
-  document.getElementById('segonsGovern').firstChild.nodeValue = secs;
+  days=Math.floor(difference/(60*60*1000*24)*1) + 33;
 
-  clearTimeout(upTimeGovern.to);
-  upTimeGovern.to=setTimeout(function(){ upTimeGovern(countTo); },1000);
+  document.getElementById('diesBassaTurullRomevaRull').firstChild.nodeValue = days;
+
+  clearTimeout(upTimeBassaTurullRomevaRull.to);
+  upTimeBassaTurullRomevaRull.to=setTimeout(function(){ upTimeBassaTurullRomevaRull(countTo); },1000);
+}
+
+function upTimeForcadell(countTo) {
+  now = new Date();
+  countTo = new Date(countTo);
+  difference = (now-countTo);
+
+  days=Math.floor(difference/(60*60*1000*24)*1) + 1;
+
+  document.getElementById('diesForcadell').firstChild.nodeValue = days;
+
+  clearTimeout(upTimeForcadell.to);
+  upTimeForcadell.to=setTimeout(function(){ upTimeForcadell(countTo); },1000);
 }
 
 $(function(){
